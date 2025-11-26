@@ -37,6 +37,7 @@ int run_external(char *argv[], int background)
 
         // If execvp returns, an error occurred
         fprintf(stderr, "hw1shell: invalid command\n");
+        print_syscall_error("execvp");
         exit(1);
     }
 
