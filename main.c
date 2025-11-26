@@ -156,9 +156,9 @@ int main() {
             continue;
         }
 
-          // ============================
+         
         // External commands
-        // ============================
+        
 
         // Check background slots BEFORE running (Requirement #6)
         if (background && !has_free_bg_slot()) {
