@@ -11,17 +11,7 @@ void print_syscall_error(const char *name)
     fprintf(stderr, "hw1shell: %s failed, errno is %d\n", name, errno);
 }
 
-/*
- * run_external:
- *  - argv      : command + args, NULL-terminated
- *  - background: 0 = foreground, 1 = background
- *
- * Return value convention (as expected by main.c):
- *  - if background == 0:
- *        return 0 on success, <0 on error
- *  - if background == 1:
- *        return child PID (>0) on success, <0 on error
- */
+
 int run_external(char *argv[], int background)
 {
     pid_t pid = fork();
